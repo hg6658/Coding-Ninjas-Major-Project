@@ -1,0 +1,1719 @@
+html{
+    min-height: 100%;
+}
+
+/* Body given a padding of 25px and applied linear-gradient as background */
+
+body{
+    margin: 0px;
+    padding: 25px;
+    background-image: linear-gradient(-45deg, #35C3F3 0%, #8b9fe8 10%, #e681d8 20%, #ffa9a4 35%, #FED2CE 50% , #35C3F3 60%, #8b9fe8 70%, #e681d8 80%, #ffa9a4 90%, #FED2CE 100%);
+}
+
+/* head section of the menu as flex to include Queue heading 
+and dropdown menu */
+
+.asideHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/*                           structure of dropdown button 
+
+                                      dropdown
+    ____________________________________||_____________________________                                     
+    ||                                                               ||
+    dropbtn                                               dropdown-content
+    (dropdown button)                   (dropdown menu after clicking button)
+*/
+
+/* dropdown button's CSS */
+
+.dropbtn{
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+}
+
+/* dropdown menu CSS*/
+
+.dropdown{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* dropdown behaviour on hover */
+
+.dropdown:hover .dropbtn{
+    transform: scale(1.2);
+}
+
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    z-index: 8;
+    top: 35px;
+    left: -100px;
+    min-width: 130px;
+    border-radius:8px;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+    
+}
+.dropdown-content a:hover {background-color: #ddd;} 
+
+.dropdown-content a{
+    margin: 5px;
+    color: black;
+    font-family: Roboto;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content{
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Declared a separate class to use flex properties */
+.display-flex{
+    display: flex;
+    flex-direction: row;
+}
+
+/* if this class used will make content center in div horizontally */
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+
+/* if this class used will make content items equally saced */
+
+.flex-between{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.margin10{
+    margin: 10px;
+}
+
+/* It is the white gradient behind the objects of the webpage */
+
+.background-white{
+    border-radius:15px;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+    background-color: #fee2f8;
+    background-image: linear-gradient(315deg, #fee2f8 0%, #dcf8ef 74%);
+    backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+    
+}
+
+/* it is the header the navigation bar with company logo and search bar navigation bar is divided into 3 section left section,
+middle section and right section header is a flex with all section evenly spreaded.. */
+
+/* the header section will be given ful width equal to content size*/
+
+/*                                                                   header(navbar)
+                                                                        |
+        __________________________________________________________________________________________________________________________________________________________
+        |                                                                |                                                                                       |
+        |                                                                |                                                                                       |
+        V                                                                V                                                                                       V
+        leftsection                                                      middle Section                                                                  right Section
+
+
+
+*/
+                                                                      
+/* the header section will be given ful width equal to content size*/
+
+.header{
+    width: 98.3%;
+    height: 85px;
+}
+
+
+.header{
+    justify-content: space-between;
+    padding: 15px;
+}
+
+/* children of left section are vertically centered */
+
+.leftSection{
+    align-items: center;
+}
+
+/* images were given full width and height and margin of 5px */
+
+.leftSection img{
+    height: 100%;
+    width: 100%;
+    margin: 5px;
+}
+
+/* Company name given font-family font-size color etc */
+
+.leftSection span{
+    font-family:"Cormorant SC";
+    font-weight: bold;
+    font-size: 48px;
+    color: black;
+    margin: 10px;
+}
+
+/* in right section styled notfication icon and profile pic*/
+
+.rightSection .notIcon{
+    height: 30%;
+    color: white;
+}
+
+.rightSection .profilePic{
+    height: 45%;
+    width:40px;
+    border-radius: 120px;
+    border: 3px solid black;
+}
+
+/* the middle section will take the all the left over space in the navbar and will shrink first when window size size is scaled down.*/
+
+.middleSection{
+    flex: 1;
+    padding-top: 28px;
+    flex-shrink: 2;
+}
+
+/* giving dimensions to the right section */
+
+.rightSection{
+    width: 28%;
+    min-width: 450px;
+    padding-right: 8px;
+}
+
+/* styled the search bar  */
+
+.search-bar{
+    background-image: linear-gradient(-45deg, #35C3F3 0%, #8b9fe8 20%, #e681d8 39%, #ffa9a4 76%, #FED2CE 100%);
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+}
+
+.search-bar input{
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #cac7ff;  
+}
+
+::placeholder{
+    color: black;
+}
+
+.search-bar button img{
+    width: 25px;
+    border-radius: 13px;
+}
+
+.search-bar button{
+    border-radius: 60px;
+    border: 1px solid grey;
+    background:  #000000;
+}
+
+.notIcon{
+    color: white;
+}
+
+/* Content section just below the header section
+                              content
+    ____________________________||_________________________________________
+    ||                                                                    ||
+    main                                                                aside 
+    containing carousel                                            Queue section
+    latest relase latestest 
+    english hindi etc 
+     
+    content is given width of the viewport and aside and main are divided
+    in ratio 3:1
+
+*/
+
+.content{
+    width: 100%;
+    height: 3400px;
+    margin-top: 15px;
+    box-sizing: border-box;
+}
+
+.main{
+    width:75%;
+    
+}
+
+.aside{
+    width: 22%;
+    height: 2800px;
+}
+
+
+/* CarouselContainer is the black background behind animation */
+
+#carouselContainer{
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+    border-radius: 25px;
+
+}
+
+/* div containing all the the 5 slides*/
+
+#carousel{
+    width: 97%;
+    height: 480px;
+    margin: 10px;
+    position: relative;
+}
+
+/* each image of the slide */
+
+#carousel img{
+    height: 95%;
+    width: 95%;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+    opacity: 1;
+
+}
+
+/*width height and animation of slide 1*/
+
+.slide1{
+    width: 46%;
+    aspect-ratio: 5/3;
+    position: absolute;
+    animation: slide1-animation 30s ease-in-out infinite both;
+}
+
+/*width height and animation of slide 2*/
+
+.slide2{
+    width: 46%;
+    aspect-ratio: 5/3;
+    position: absolute;
+    animation: slide2-animation 30s ease-in-out infinite both;
+}
+
+/*width height and animation of slide 3*/
+
+.slide3{
+    width: 46%;
+    aspect-ratio: 5/3;
+    position: absolute;
+    animation: slide3-animation 30s ease-in-out infinite both;
+}
+
+/*width height and animation of slide 4*/
+
+.slide4{
+    width: 46%;
+    aspect-ratio: 5/3;
+    position: absolute;
+    animation: slide4-animation 30s ease-in-out infinite both;
+}
+
+/*width height and animation of slide 5*/
+
+.slide5{
+    width: 46%;
+    aspect-ratio: 5/3;
+    position: absolute;
+    animation: slide5-animation 30s ease-in-out infinite both;
+}
+
+/* class for declaration for 3d animation*/
+
+.frame {
+    transform: perspective(60px);
+    transform-style: preserve-3d;
+}
+
+
+
+@keyframes slide1-animation {
+
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  
+    20% {
+      transform: translate3d(445px, 0, -45px);
+    }
+  
+    40% {
+      transform: translate3d(445px, 0, -90px);
+    }
+      
+      60% {
+      transform: translate3d(-445px, 0, -90px);
+    }
+      
+      80% {
+      transform: translate3d(-445px, 0, -45px);
+    }
+      
+      
+  }
+  
+  @keyframes slide2-animation {
+  
+    0%,
+    100% {
+      transform: translate3d(445px, 0, -45px);
+    }
+  
+    20% {
+      transform: translate3d(445px, 0, -90px);
+    }
+  
+    40% {
+      transform: translate3d(-445px, 0, -90px);
+    }
+      
+      60% {
+      transform: translate3d(-445px, 0, -45px);
+    }
+      
+      80% {
+      transform: translate3d(0, 0, 0);
+    }
+      
+      
+  }
+  
+  @keyframes slide3-animation {
+  
+    0%,
+    100% {
+      transform: translate3d(445px, 0, -90px);
+    }
+  
+    20% {
+      transform: translate3d(-445px, 0, -90px);
+    }
+  
+    40% {
+      transform: translate3d(-445px, 0, -45px);
+    }
+      
+      60% {
+      transform: translate3d(0, 0, 0);
+    }
+      
+      80% {
+      transform: translate3d(445px, 0, -45px);
+    }
+      
+      
+  }
+  
+  
+  @keyframes slide4-animation {
+  
+    0%,
+    100% {
+      transform: translate3d(-445px, 0, -90px);
+    }
+  
+    20% {
+      transform: translate3d(-445px, 0, -45px);
+    }
+  
+    40% {
+      transform: translate3d(0, 0, 0);
+    }
+      
+      60% {
+      transform: translate3d(445px, 0, -45px);
+    }
+      
+      80% {
+      transform: translate3d(445px, 0, -90px);
+    }
+      
+      
+  }
+  
+  @keyframes slide5-animation {
+  
+    0%,
+    100% {
+      transform: translate3d(-445px, 0, -45px);
+    }
+  
+    20% {
+      transform: translate3d(0, 0, 0);
+    }
+  
+    40% {
+      transform: translate3d(445px, 0, -45px);
+    }
+      
+      60% {
+      transform: translate3d(445px, 0, -90px);
+    }
+      
+      80% {
+      transform: translate3d(-445px, 0, -90px);
+    }
+      
+      
+  }
+
+/* This css code is for music player located at the bottom of the screen divided into three sections leftPlayer middlePlayer and rightPlayer 
+music player has display flex with all three sections evenly spreaded.. 
+
+                                                      musicPlayer
+    ______________________________________________________||____________________________________________________
+    ||                                                    ||                                                  ||
+    left player                                        middle Player                                        right player
+    (album image favorite                             (main music player)                                   (volume bar maximize playlist etc)
+    icon ban icon                                         ||
+    song name album name)                                 ||
+                          ________________________________||_____________________________________
+                          ||                                                                   ||
+                          upper middle                                                         (lower middle
+                    (music player buttons                                                      time remaining, seekbar etc) 
+                     shuffle pause play etc)                           
+                    
+
+*/
+
+
+
+.musicPlayer{
+    position: fixed;
+    bottom : 0px;
+    width: 100%;
+    height: 156px;
+    margin: -25px;
+    z-index: 5;
+}
+
+/* left section contains album image favorite icon and ban icon and song and album name all arranged in a grid of four columns and two rows*/
+
+
+.leftPlayer{
+    width: 20%;
+    height: 70%;
+    margin-left: 45px;
+    margin-top: 15px;
+    margin-bottom:20px;
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+/* giving positions to all the childrens in grid*/
+
+
+#songImage{
+    grid-row: 1/3;
+    padding: 5px;
+}
+
+#songImage img{
+    display: block;
+    margin: auto;
+    height: 90%;
+    border-radius: 5px;
+
+}
+
+#songName{
+    min-width: 80px;
+    font-family: Roboto;
+    padding-left: 15px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+#addFavourite{
+    min-width: 25px;
+    padding-top:15px;
+}
+
+#addFavourite img{
+    width: 75%;
+    max-width: 25px;
+}
+
+#ban{
+    min-width: 25px;
+    padding-top:15px;
+}
+
+#ban img{
+    width: 75%;
+    max-width: 25px;
+}
+
+#songArtist{
+    padding-left: 15px;
+    font-size: 15px;
+    font-family: Roboto;
+    min-width: 80px;
+}
+
+/* setting how musiic player icons will behave in hover */
+
+
+.profilePic:hover, .notIcon:hover, #addFavourite:hover, #ban:hover, #shuffle:hover, #backward:hover, #play:hover, #forward:hover, #repeat:hover, #playlist:hover, #maximize:hover{
+    transition: 0.5s ease-in-out;
+    transform: scale(1.3);
+}
+
+/* the middle part of music player will also be a grid which is upperMiddle and lowerMiddle divided in ratio 3:2*/
+
+
+.middlePlayer{
+    width: 40%;
+    height: 70%;
+    margin: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 2fr;
+}
+
+/* giving dimensions to right side of the player*/
+
+
+.rightPlayer{
+    width:20%;
+    height: 70%;
+    margin: 15px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/* The middle player is further divided into two section the middle player has flex property with flex-direction column so that 
+these two section stacked on top of the another. */
+
+
+.lowerMiddle{
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+}
+
+.Player{
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#shuffle, #backward, #play, #forward, #repeat{
+    height: 97%;
+}
+
+/* giving dimensions to the music player icons*/
+
+.Player img{
+    width: 35%;
+    max-width: 25px;
+    height: 70%;
+    display:block;
+    margin: auto;
+
+}
+
+#timeElapsed{
+    font-family:Roboto;
+    margin: auto;
+}
+
+#timeRemaining
+{
+    font-family: Roboto;
+    margin: auto;
+}
+
+#seeker{
+    margin: auto 0;
+}
+
+#seeker input[type="range"]{
+    width: 95%;
+}
+
+#playlist{
+    margin: auto 0;
+    grid-column: 1/2;
+}
+
+#volume{
+    margin: auto 0;
+    grid-column: 1/2;
+}
+
+#volumeSlider{
+    margin: auto 0;
+    grid-column: 2/5;
+}
+
+#maximize{
+    margin: auto 0;
+    grid-column: 2/3;
+}
+
+#maximize img{
+    max-height: 25px;
+}
+
+.rightPlayer img{
+    width: 75%;
+    max-width: 25px;
+    display:block;
+    margin: auto;
+}
+
+.rightPlayer input{
+    display: block;
+    width: 95%;
+}
+
+#latestRelease{
+    width: 97%;
+    height: auto;
+    margin: 10px;
+}
+
+
+.sectionHeader{
+    width: 98%;
+    height: 17%;
+    margin: 10px;
+}
+
+
+.sectionHeader p{
+    font-family: Roboto;
+    margin: 25px 20px;
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
+
+}
+
+/* latest Release section is a 2X2 grid */
+
+#latestRelease .sectionContent{
+    width: 98%;
+    height: 75%;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Each card(song) is further a grid of 3 columns anf 4 rows */
+
+#latestRelease .sectionContent .card{
+    margin: 7px;
+    display: grid;
+    grid-template-columns: 7fr 9fr 2fr;
+    grid-template-rows: 2fr 1fr 1fr 2fr;
+}
+
+#latestRelease .sectionContent .albumArt{
+    grid-row: 1/5;
+}
+
+#latestRelease .sectionContent .songName{
+    grid-row: 1/2;
+}
+
+#latestRelease .sectionContent .cardOptions{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    grid-row: 1/4;
+}
+
+
+#latestRelease .sectionContent .cardOptions img{
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+
+#latestRelease .sectionContent .albumArt img{
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.7);
+    display: block;
+    width: 65%;
+    margin: 15% auto;
+    border-radius: 15px;
+}
+
+#latestRelease .sectionContent p{
+    font-size: 18px;
+    display: inline;
+    font-family: Roboto;
+}
+
+#popularArtists .sectionContent p{
+    font-size: 16px;
+    display: inline;
+    font-family: Roboto;
+}
+
+
+#latestRelease .sectionContent .details p{
+    font-size: 13px;
+}
+
+#latestRelease .sectionContent .songName{
+    display: flex;
+    align-items: flex-end;
+}
+
+
+#popularArtists{
+    width: 97%;
+    height: auto;
+    margin: 10px;
+}
+
+#popularArtists .sectionContent{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+}
+
+/* artist section is a flex with flex-direction column which containg two section a round card containing artist image ans name of the artist*/
+
+.artistSection{
+
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    margin: 10px;
+
+}
+
+/* round card is the white background on which arist image present  */
+
+.artistSection .roundCard{
+    transition: 0.5s ease-in-out;
+    margin: 5px;
+    position:relative;
+    aspect-ratio:1/1;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+
+.artistSection .artistName{
+    margin: 5px;
+    aspect-ratio: 9/1;
+    height: 10%;
+}
+
+/* this class can give border radius of 300 px */
+
+.radius300{
+    border-radius: 300px;
+}
+
+/* this class can give border radius of 15 px */
+
+.radius15{
+    border-radius: 15px;
+}
+
+
+
+
+.artistSection .artistPicture{
+    opacity: 1;
+    width: 85%;
+    display: block;
+    margin: auto;
+    position: absolute;
+    z-index:1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.artistSection .artistName{
+    border-radius: 5px;
+    
+}
+
+.artistSection p{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Roboto;
+    display: inline;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artistSection .artistName{
+    text-align: center;
+}
+
+
+/* top charts is grid of 3 columns and 2 rows */
+
+#topCharts{
+    width: 97%;
+    height: auto;
+    margin: 10px;
+}
+
+
+
+#topCharts .sectionContent{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* each tile that appear in the top charts menu */
+
+.chart{
+    position: relative;
+    aspect-ratio: 2/1;
+    margin: 10px;
+}
+
+/* picture inside each tie */
+
+.chart .picture{
+    transition: .5s ease-in-out;
+    opacity: 1;
+    display: block;
+    width: 95%;
+    aspect-ratio: 2/1;
+    margin: auto;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+}
+
+/* the div that only appears when we hover on each tile */
+
+.chart .chartHover{
+    transition: .5s ease-in-out;
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 7fr 2fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.chart .chartHover img {
+    width: 13%;
+}
+
+.hoverMenu,.hoverFavorite{
+    margin: 20px;
+}
+
+.chart .chartHover .hoverPlay{
+    display: flex;
+    align-items: center;
+    grid-column: 1/3;
+}
+
+.chart .chartHover .hoverPlay img{
+    margin: auto;
+    display: block;
+}
+
+
+
+.chart .chartHover .hoverFavorite{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.chart .chartHover .hoverMenu{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.chart:hover .picture{
+    opacity: 0.2;
+}
+
+.chart:hover .chartHover{
+    opacity: 1;
+}
+
+
+.ahoverPlay img{
+    width: 25%;
+    display: block;
+    z-index:3;
+}
+
+.ahoverPlay{
+    position: absolute;
+    z-index:2;
+    opacity: 0;
+    width:85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* when we hover on an artist its opacity changes to 0.3 and other ahoverplay whose position is absolute its opacity changes to 1 */
+
+.roundCard:hover .artistPicture{
+    opacity: 0.3;
+}
+
+.roundCard:hover{
+    transform: scale(1.1);
+}
+
+
+.roundCard:hover .ahoverPlay{
+    opacity: 1;
+}
+
+/* latest english section contains two subsection section header and section content . the section section is a flex row wise */
+
+
+#latestEnglish,#latestHindi{
+    width: 97%;
+    height: auto;
+    margin: 10px;
+}
+
+#latestEnglish .sectionContent{
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    height: 66%;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+/* latest english section contains two subsection section header and section content . the section section is a flex row wise */
+
+#latestHindi .sectionContent{
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    height: 66%;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+/* both latest hindi and latest english section contain latest song section which basically a card containing a grid of 2 columnns and 4 rows*/
+
+.latestSong{
+    aspect-ratio: 1/1;
+    margin: 10px;
+    flex:1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr 2fr 1fr;
+    grid-gap: 1px;
+    
+}
+
+
+
+
+.latestalbumArt{
+    padding: 10px;
+    grid-row:1/4;
+    grid-column: 1/4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.latestMenu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.latestPlay{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.latestPlaylist{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.latestSongname{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1/4;
+}
+
+.latestSong .latestalbumArt img{
+    width: 90%;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    display: block;
+    aspect-ratio: 1/1;
+}
+
+.latestSong img{
+    display: block;
+    width: 45%;
+}
+
+.latestSong p{
+    display: inline;
+    font-weight: bold;
+    font-family: Roboto;
+    font-size: 98%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artistName p{
+    display: inline;
+    font-weight: bold;
+    font-family: Roboto;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* it is a grid with 5 columns */
+
+#podcast{
+    width: 97%;
+    height: auto;
+    margin: 10px;
+}
+
+#podcast .sectionContent{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+
+.aside{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+
+}
+
+.asideHeader{
+    margin: 10px;;
+    flex:1;
+}
+
+.asideContent{
+    margin: 10px;
+    margin-right: 0px;;
+    flex: 60;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.queueItem{
+    flex:1;
+    padding-right:10px;
+    padding-left:10px;
+    margin: 10px;
+    border-radius:10px;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2px 25px 25px 1fr;
+}
+
+.itemPic{
+       grid-row:1/5;
+       grid-column: 1/3;
+       margin: 2px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       position:relative;
+}
+
+
+.itemFav{
+    margin: 2px;
+    grid-row: 1/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemMenu{
+    margin: 2px;
+    grid-row: 1/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemName{
+    margin: 2px;
+    grid-row: 2/3;
+    grid-column: 3/6;
+}
+
+.queueItem p{
+    font-size: 18px;
+    font-family: Roboto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    block-size: 22px;
+    
+}
+
+
+
+.itemTime{
+    margin: 2px;
+    grid-row: 3/4;
+    grid-column: 3/6;
+}
+
+.itemPic img{
+    width: 80%;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    position: absolute;
+}
+
+.ihoverPlay img{
+    width: 25%;
+    display: block;
+    z-index:3;
+}
+
+.ihoverPlay{
+    position: absolute;
+    z-index:2;
+    opacity: 0;
+    width:85%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemPic:hover .itemPicture{
+    opacity: 0.3;
+}
+
+
+
+.itemPic:hover .ihoverPlay{
+    opacity: 1;
+}
+
+.width-60{
+    width: 60%;
+}
+
+
+.asideHeader p{
+    font-family: Roboto;
+    margin: 25px 20px;
+    font-size: 45px;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+/* every icon will scale to 1.3 on hover*/
+
+  .playSong:hover{
+      transform: scale(1.3);
+  }
+
+
+  .menu:hover{
+    transform: scale(1.3);
+}
+
+.addPlaylist:hover{
+    transform: scale(1.3);
+}
+
+.latestPlay:hover{
+    transform: scale(1.3);
+}
+
+
+.latestMenu:hover{
+  transform: scale(1.3);
+}
+
+.latestPlaylist:hover{
+  transform: scale(1.3);
+}
+
+.queueButton{
+    display: none;
+}
+
+/* a new layout of music player which is hidden when screen size is large*/
+
+.middlePlayerHidden{
+    display: none;
+}
+
+/* when screen size hits 1200px and below name of the song menu icon time remaining in queu section of the page will hide. Grid layout in queusection will 
+change  middlesection of the header will also disappear*/
+
+@media screen and (max-width: 1200px) {
+
+
+    .itemMenu, .itemName, .itemTime{
+        display:none;
+    }
+    
+    .queueItem{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .itemPic{
+        grid-column: 1/4;
+    }
+    
+    .itemPic img {
+        height: 80%;
+        width: auto;
+    }
+
+    
+
+    .middleSection{
+        display: none;
+    }
+
+
+    #popularArtists .sectionContent{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    #podcast .sectionContent{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+
+  }
+
+  /* when screen size hits 1100px and below the animation of the carousel will change and grid layout for latest hindi and english section 
+  and podcast section will change*/
+
+  @media screen and (max-width: 1100px) {
+
+
+    @keyframes slide1-animation {
+
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0);
+        }
+      
+        20% {
+          transform: translate3d(0, 0, 0);
+        }
+      
+        40% {
+          transform: translate3d(0, 0, -90px);
+        }
+          
+          60% {
+          transform: translate3d(0, 0, -135px);
+        }
+          
+          80% {
+          transform: translate3d(0, 0, -180px);
+        }
+          
+          
+      }
+      
+      @keyframes slide2-animation {
+      
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0);
+        }
+      
+        20% {
+          transform: translate3d(0, 0, -90px);
+        }
+      
+        40% {
+          transform: translate3d(0, 0, -135px);
+        }
+          
+          60% {
+          transform: translate3d(0, 0, -180px);
+        }
+          
+          80% {
+          transform: translate3d(0, 0, 0);
+        }
+          
+          
+      }
+      
+      @keyframes slide3-animation {
+      
+        0%,
+        100% {
+          transform: translate3d(0, 0, -90px);
+        }
+      
+        20% {
+          transform: translate3d(0, 0, -135px);
+        }
+      
+        40% {
+          transform: translate3d(0, 0, -180px);
+        }
+          
+          60% {
+          transform: translate3d(0, 0, 0);
+        }
+          
+          80% {
+          transform: translate3d(0, 0, 0);
+        }
+          
+          
+      }
+      
+      
+      @keyframes slide4-animation {
+      
+        0%,
+        100% {
+          transform: translate3d(0, 0, -135px);
+        }
+      
+        20% {
+          transform: translate3d(0, 0, -180px);
+        }
+      
+        40% {
+          transform: translate3d(0, 0, 0);
+        }
+          
+          60% {
+          transform: translate3d(0, 0, 0);
+        }
+          
+          80% {
+          transform: translate3d(0, 0, -90px);
+        }
+          
+          
+      }
+      
+      @keyframes slide5-animation {
+      
+        0%,
+        100% {
+          transform: translate3d(0, 0, -180px);
+        }
+      
+        20% {
+          transform: translate3d(0, 0, 0);
+        }
+      
+        40% {
+          transform: translate3d(0, 0, 0);
+        }
+          
+          60% {
+          transform: translate3d(0, 0, -90px);
+        }
+          
+          80% {
+          transform: translate3d(0, 0, -135px);
+        }
+          
+          
+      }
+      
+      .slide1, .slide2, .slide3, .slide4, .slide5{
+          width: 85%;
+      }
+
+      #podcast .sectionContent{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      #latestHindi .sectionContent{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      #latestEnglish .sectionContent{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+
+
+  }  
+
+  /* when screen size hits 930px and below grid layout of every section will change search bar will disappear layout of music player 
+  will change. */
+
+  @media screen and (max-width: 930px) {
+    
+    .leftSection span{
+        font-size: 32px;
+    }
+
+    #latestRelease .sectionContent{
+        grid-template-columns: 1fr;
+    }
+
+    #popularArtists .sectionContent{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #podcast .sectionContent{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #latestEnglish .sectionContent{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #latestHindi .sectionContent{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #topCharts .sectionContent{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    
+    
+    .search-bar{
+        display:none;
+    }
+
+    .rightSection{
+        min-width:50px;
+        max-width:125px;
+    }
+
+    
+    .rightPlayer{
+        display: none;
+    }
+
+    .middlePlayer{
+        display: none;
+    }
+
+    .middlePlayerHidden{
+        display: block;
+        width: 45%;
+        height: 70%;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .leftPlayer{
+        width: 35%;
+    }
+
+    .middlePlayerHidden img{
+        width: 25%;
+        display: block;
+        margin:auto;
+    }
+ 
+    .content{
+        height: 4000px;
+    }
+    
+
+
+
+}
+
+@media screen and (max-width: 800px) {
+    .queueItem{
+        grid-template-columns: 1fr;
+    }
+    
+    .itemFav{
+        display: none;
+    }
+
+    .itemPic img{
+
+        width: 80%;
+        height: auto;
+
+    }
+
+    .asideHeader p{
+        font-size: 32px;
+    }
+
+    .aside{
+        height: 2400px;
+    }
+    
+    .content{
+        height: 4200px;
+    }
+
+}    
+
+
+@media screen and (max-width: 700px) {
+    
+    .aside{
+        display:none;
+    }
+
+    .main{
+        width: 97%;
+    }
+
+    #ban{
+        visibility: hidden;
+    }
+
+    .queueButton{
+        display: flex;
+        position: fixed;
+        bottom: 145px;
+        right: 20px;
+        height: 100px;
+        width: 100px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .queueButton img{
+        width: 70%;
+        height: auto;
+        display: block;
+    }
+
+    .queueButton:hover img{
+        transform: scale(1.15);
+    }
+
+    #topCharts .sectionContent{
+        grid-template-columns: 1fr;
+    }
+
+    #latestHindi .sectionContent{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #latestEnglish .sectionContent{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #podcast .sectionContent{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .content{
+        height: 6600px;
+    }
+
+}
+
+
+@media screen and (max-width: 576px) {
+    
+    .leftSection span{
+        display: none;
+    }
+}
+
+
