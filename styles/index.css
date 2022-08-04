@@ -1714,6 +1714,29 @@ change  middlesection of the header will also disappear*/
     .leftSection span{
         display: none;
     }
+    
+    #popularArtists .sectionContent{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #latestEnglish .sectionContent{
+        grid-template-columns: 1fr;
+    }
+    #latestHindi .sectionContent{
+        grid-template-columns: 1fr;
+    }
+
+    .latestSong{
+        width: 60%;
+    }
+
+    #songArtist{
+        display:none;
+    }
+
+    #addFavourite{
+        display:none;
+    }
 }
 
 
